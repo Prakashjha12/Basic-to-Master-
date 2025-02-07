@@ -10,7 +10,7 @@ html, body {
 }
 
 .card {
-  border: 1px solid #000;
+  border: 10px dotted, rgb(210, 27, 27);
   display: flex;
   flex-direction: column;
   align-items: center;
