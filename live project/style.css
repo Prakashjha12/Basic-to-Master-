@@ -10,14 +10,30 @@ body{
 .image{
     height: 100%;
     width: 100%;
-    /* background-color: wheat; */
     display: grid;
-    /* gap: 10px; */
+    grid-template-areas: 
+    "a"
+    "b"
+    "c"
+    "d"
+    "e"
+    "f"
+    "g"
+    "h"
+    "i"
+    "j";
+    }
+   
+
+
+@media (min-width:1080px) {
+    .image{
     grid-template-areas:
      "a a b c"
      "a a d e"
-     "f g j j"
-     "h i j j";
+     "f g h i"
+     "f g j j";    
+    }
 }
 img {
   
