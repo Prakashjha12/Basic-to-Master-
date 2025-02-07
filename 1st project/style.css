@@ -1,0 +1,42 @@
+*{
+    margin-left: 10;
+    padding: 0;
+    box-sizing: border-box;
+}
+header h1{
+    margin-bottom: 15px;
+}
+#listitem a{
+    padding-right: 5px;
+    border-right: 2px solid black;
+}
+hr {
+        margin-top: 10px;
+ }
+ .page1{
+    margin-top: 12px;
+ }
+ .page1 h2{
+    margin-bottom: 20px;
+ }
+img{
+    margin: 30px;
+    width: 30%;
+}
+#quote{
+    margin-bottom: 20px;
+}
+
+#list{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#list ul{
+    margin: 40px;
+}
+#list2{
+    /* padding: 20px; */
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
