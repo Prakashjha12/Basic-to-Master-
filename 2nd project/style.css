@@ -1,48 +1,57 @@
+/* General reset for the form */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: Arial, sans-serif;
   display: flex;
+  justify-content: center;
   align-items: center;
-  /* width: 100vh; */
   height: 100vh;
-  margin-left: 80px;
-  margin-right: 80px;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 35%,
-    rgba(0, 212, 255, 1) 100%
-  );
+  background-color: #f0f0f0;
 }
-.form-container {
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  text-align: center;
+
+.form-Container {
+  width: 400px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in-out; /* Smooth morphing effect */
 }
+
+.form-Container:hover {
+  width: 450px; /* Increase width */
+  height: 450px; /* Increase height */
+  border-radius: 50%; /* Morph into a circle */
+  background-color: #007bff; /* Change background color */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
 input,
-textarea,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
 button {
   width: 100%;
-  margin-top: 10px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 14px;
-}
-button {
-  background: #007bff;
+  padding: 12px;
+  background-color: #007bff;
   color: white;
-  cursor: pointer;
   border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
 button:hover {
-  background: #b1b7be;
+  background-color: #0056b3;
 }
