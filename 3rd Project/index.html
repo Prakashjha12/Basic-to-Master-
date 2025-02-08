@@ -3,85 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Delicious coffe</title>
+    <title>Contact Us Form</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <h1 id="heading-top">delicious coffee</h1>
-      <div class="navbar">
-        <nav>
-          <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Products</li>
-            <li>Contact</li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <div class="conatiner">
-      <div class="sidebar">
-        <h3>Explore more</h3>
-        <ul>
-          <li>Our Story</li>
-          <li>Coffee Beans</li>
-          <li>Brewing Guide</li>
-          <li>Visit Us</li>
-        </ul>
-      </div>
-      <div class="main-content">
-        <h2>Welcome to Delocious Coffee</h2>
-        <div class="images">
-          <img
-            src="https://images.pexels.com/photos/1695052/pexels-photo-1695052.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-            alt=""
-          />
-          <img
-            src="https://images.pexels.com/photos/1907071/pexels-photo-1907071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-            alt=""
-          />
-          <img
-            src="https://images.pexels.com/photos/606545/pexels-photo-606545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-            alt=""
-          />
-        </div>
-        <div class="main-content-p">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum,
-            veritatis? Autem, numquam nesciunt modi qui eum eaque facere debitis
-            delectus cupiditate sed dignissimos, minus odit minima temporibus,
-            quisquam omnis laudantium.
-          </p>
-        </div>
-        <div id="main-content-h3">
-          <h3>Our Feutured Coffees</h3>
-          <ul>
-            <li>
-              <strong>Espresso</strong>: A rich and concentrated shot of coffee
-              with a strong flavor.
-            </li>
-            <li>
-              <strong>Macchiato</strong>: An espresso with a small amount of
-              frothy milk on top.
-            </li>
-            <li>
-              <strong>Ristretto</strong>: A shorter, more intense version of
-              espresso with less water.
-            </li>
-          </ul>
-        </div>
-        <div id="main-content-para">
-          <p>
-            learn more about our brewing process our commitments to
-            sustainablitty process our commitments to sustainablitty Know more
-            <a href="https://www.Prakashjha.com"> about </a> our brewing
-          </p>
-          <p>Thankyou for choosing delicious coffe</p>
-        </div>
+    <div class="form-Container">
+      <form action="" id="form">
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Enter Your Name"
+        />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter Your Email"
+        />
+        <input
+          type="tel"
+          name="phone"
+          id="phone"
+          placeholder="Enter Your Phone"
+        />
+        <textarea
+          name="message"
+          id="message"
+          cols="30"
+          rows="10"
+          placeholder="Enter Your Message"
+        ></textarea>
+      </form>
+      <div id="button-1">
+        <button type="submit">Submit</button>
       </div>
     </div>
-
-    <footer>&copy; delicious coffee company 2020 all right reserved</footer>
   </body>
 </html>
