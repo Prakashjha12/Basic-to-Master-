@@ -8,6 +8,7 @@ body {
   width: 100%;
 }
 .image {
+  gap: 1rem;
   height: 100%;
   width: 100%;
   display: grid;
