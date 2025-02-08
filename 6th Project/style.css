@@ -1,0 +1,65 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+body{
+    font-size: 16px;
+    padding: 10px;
+}
+@media (min-width: 768px){
+    body{
+        font-size: 18px;
+        padding:20px;
+    }
+}
+#top-heading , #top-paragraph{
+    text-align: center;
+    margin: 10px 0; 
+    color: white;
+}
+.Page1{
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+@media (max-width:768px){
+    .Page1{
+        grid-template-columns: 1fr;
+    }
+}
+
+.Page1 img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.card {
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light transparent border */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow for depth */
+    
+    background: rgba(255, 255, 255, 0.1); /* Transparent white */
+    backdrop-filter: blur(10px); /* Glass blur effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+    
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Optional: Add hover effect for a dynamic look */
+.card:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.02);
+}
+.card h2 , .card p , .card h4{
+    background: none;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    margin: 10px 0;
+    text-wrap: wrap;
+}
