@@ -47,14 +47,39 @@ main {
 }
 .view-2 {
   width: 100%;
-  padding: 4rem 5rem;
+  padding: 4rem 3rem;
   display: flex;
   justify-content: center;
 
   .marquee {
     display: flex;
-    width: 50%;
+    width: 100%;
     overflow: hidden;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px; /* Adjust width for visibility */
+        height: 100%;
+        background-image: linear-gradient(to right, #0e0e0e, transparent);
+        z-index: 2; 
+
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50px; 
+        height: 100%;
+        background-image: linear-gradient(to left, #0e0e0e, transparent);
+        z-index: 2; 
+
+    }
+      
 
     .text {
       display: flex;
@@ -94,5 +119,11 @@ main {
         display: block;
       }
     }
+  }
+  .view-2{
+    .marquee{
+        width: 50%;
+    }
+
   }
 }
