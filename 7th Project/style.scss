@@ -17,27 +17,24 @@ html {
 main {
   width: 100%;
 }
-header{
-
+header {
   position: fixed;
   margin: 0 20px;
-    top: 15px;
-    left: 50%;
-    transform: translateX(-50%); 
-    width: auto; 
-    z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.8);  
-    padding:12px 12px 12px 20px;;
-    border: 2px solid gray;
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Light border */
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 12px 12px 12px 20px;
+  border: 2px solid gray;
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Light border */
   backdrop-filter: blur(10px); /* Background blur for glass effect */
   background-color: rgba(255, 255, 255, 0.1); /* Transparent white background */
   border-radius: 8px; /* Optional: rounded corners */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  
-  
 
-  .nav-bar{
+  .nav-bar {
     // border: 2px solid red ;
     display: flex;
     justify-content: center;
@@ -45,49 +42,45 @@ header{
     // padding: 10px 20px;
     gap: 20px;
 
-    .logo{
+    .logo {
       display: flex;
       align-items: center;
       justify-content: center;
       width: 80px;
       height: 50px;
     }
-    .logo img{
+    .logo img {
       max-width: 100%;
       height: auto;
     }
 
-    ul{
-        display: flex; /* Makes the list items horizontal */
-            gap: 20px;
-            list-style: none; /* Removes default bullets */
-            padding: 0;
-            margin: 0;
+    ul {
+      display: flex; /* Makes the list items horizontal */
+      gap: 20px;
+      list-style: none; /* Removes default bullets */
+      padding: 0;
+      margin: 0;
 
-
-      li{
+      li {
         display: inline-flex; /* Keeps items aligned */
         align-items: center;
         justify-content: center;
       }
-      a{
+      a {
         text-decoration: none;
         color: white;
         font-size: 15px;
-
       }
-      #Talk-btn{
+      #Talk-btn {
         border: 2px solid rgba(169, 158, 158, 0.497);
         padding: 12px;
         text-wrap: nowrap;
         background-color: wheat;
         border-radius: 4px;
-
       }
-      #Talk-btn span{
+      #Talk-btn span {
         color: #0e0e0e;
       }
-      
     }
   }
 }
@@ -141,7 +134,6 @@ header{
         box-shadow: 0 0 10px rgb(54, 54, 54);
         filter: brightness(1.2);
       }
-     
     }
   }
 }
@@ -190,10 +182,10 @@ header{
     }
   }
 }
-.view-3{
+.view-3 {
   margin: 5px;
   padding: 20px;
-  .card{
+  .card {
     margin-bottom: 10px;
     background-color: #292521;
     border: 2px solid rgba(38, 38, 38, 0.669);
@@ -203,30 +195,137 @@ header{
     background-color: rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 
-    h3{
+    h3 {
       margin: 20px;
       font-weight: 300;
     }
-    
-    p{
+
+    p {
       font-weight: 200;
       margin: 20px;
     }
-    #card-button i{
+    #card-button i {
+      margin: 20px;
       font-size: 20px;
-      padding: 20px;
-      
+      border: 2px solid rgba(182, 157, 157, 0.287);
+      border-radius: 50%;
+      padding: 0.3em;
+      cursor: pointer;
+      transition: background-color 0.3s ease, opacity 0.3s ease;
+
+      &:hover {
+        background-color: rgba(212, 212, 209, 0.33);
+        opacity: 1;
+        box-shadow: 0 0 10px rgb(54, 54, 54);
+        filter: brightness(1.2);
+      }
     }
-    #card-button span{
+    #card-button span {
       font-weight: 100;
-
+      cursor: pointer;
     }
-    }
+  }
 }
-.view-4{
+.view-4 {
+  padding: 2rem 3rem;
+  .left-text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
 
-  
+    h2 {
+      font-weight: 100;
+      font-size: 2rem;
+      opacity: 0.8;
+    }
+    button {
+      height: 2rem;
+      width: 10rem;
+      background: transparent;
+      color: white;
+      font-size: 1.25rem; // Increased for better readability
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      white-space: nowrap; // Replaces 'text-wrap: nowrap;' for better compatibility
+      border: 2px solid white;
+      border-radius: 5px; // Adds slight rounding for a modern look
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.2); // Light hover effect
+        color: black;
+        border-color: wheat;
+      }
+    }
+  }
+  .card-container {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-areas:
+      "d"
+      "e"
+      "f"
+      "g";
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
+    .card {
+      object-fit: cover;
+      background-position: center;
+      background-size: cover;
+      aspect-ratio: 4/3;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      .card-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem 1.5rem;
+        margin: 0.8rem 1.5rem;
+        border: 1px solid #343230;
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
+
+        .left-text {
+          font-size: 1.3rem;
+          font-weight: 100;
+        }
+
+        .right-text {
+          font-size: 1rem;
+          font-weight: 100;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .d {
+      grid-area: d;
+      background-image: url(images/Laptop\ from\ Arik\ Portfolio.jpg);
+    }
+
+    .e {
+      grid-area: e;
+      background-image: url(images/Laptop\ 2.jpg);
+    }
+    .f {
+      grid-area: f;
+      background-image: url(images/Phone\ from\ Arik\ Portfolio\ \(1\).jpg);
+    }
+    .g {
+      grid-area: g;
+      background-image: url(images/Phone\ from\ Arik\ Portfolio.jpg);
+    }
+  }
 }
+
 
 @keyframes marquee {
   0% {
@@ -241,7 +340,7 @@ header{
   html {
     font-size: clamp(16px, 1vh, 20px);
   }
- 
+
   .view-1 {
     img {
       width: 28%;
@@ -254,23 +353,47 @@ header{
         display: block;
       }
     }
-
   }
   .view-2 {
     .marquee {
       width: 50%;
     }
   }
-  .view-3{
+  .view-3 {
     display: flex;
     justify-content: center;
     gap: 5px;
-    
 
-    .card{
+    .card {
       margin: 20px;
       width: 500px;
       height: 250px;
+    }
+  }
+  .view-4 {
+    padding: 4rem 5rem;
+
+    .left-text {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+      gap: 40px; //
+
+      h2 {
+        font-size: 2.5rem;
+
+        button {
+          height: 2.5rem;
+          width: 12rem;
+          font-size: 1.5rem;
+        }
+      }
+    }
+    .card-container {
+      grid-template-areas:
+        "d e"
+        "f g";
+      grid-template-columns: 1fr 1fr;
     }
   }
 }
