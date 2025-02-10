@@ -17,6 +17,80 @@ html {
 main {
   width: 100%;
 }
+header{
+
+  position: fixed;
+  margin: 0 20px;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%); 
+    width: auto; 
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);  
+    padding:12px 12px 12px 20px;;
+    border: 2px solid gray;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Light border */
+  backdrop-filter: blur(10px); /* Background blur for glass effect */
+  background-color: rgba(255, 255, 255, 0.1); /* Transparent white background */
+  border-radius: 8px; /* Optional: rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  
+  
+
+  .nav-bar{
+    // border: 2px solid red ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // padding: 10px 20px;
+    gap: 20px;
+
+    .logo{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px;
+      height: 50px;
+    }
+    .logo img{
+      max-width: 100%;
+      height: auto;
+    }
+
+    ul{
+        display: flex; /* Makes the list items horizontal */
+            gap: 20px;
+            list-style: none; /* Removes default bullets */
+            padding: 0;
+            margin: 0;
+
+
+      li{
+        display: inline-flex; /* Keeps items aligned */
+        align-items: center;
+        justify-content: center;
+      }
+      a{
+        text-decoration: none;
+        color: white;
+        font-size: 15px;
+
+      }
+      #Talk-btn{
+        border: 2px solid rgba(169, 158, 158, 0.497);
+        padding: 12px;
+        text-wrap: nowrap;
+        background-color: wheat;
+        border-radius: 4px;
+
+      }
+      #Talk-btn span{
+        color: #0e0e0e;
+      }
+      
+    }
+  }
+}
 .view-1 {
   width: 100%;
   display: flex;
@@ -40,8 +114,34 @@ main {
     line-height: 1.6;
     margin: 0.9rem 0;
     opacity: 0.6;
+    padding-bottom: 40px;
     br {
       display: none;
+    }
+  }
+  .button {
+    display: flex;
+    align-items: center;
+    opacity: 0.4;
+    gap: 15px;
+    text-transform: uppercase;
+    font-weight: 300;
+
+    i {
+      background-color: #292521;
+      border: 2px solid white;
+      border-radius: 50%;
+      font-size: 30px;
+      transition: background-color 0.3s ease, opacity 0.3s ease;
+
+      &:hover {
+        background-color: rgba(212, 212, 209, 0.33);
+        border-color: aliceblue;
+        opacity: 1;
+        box-shadow: 0 0 10px rgb(54, 54, 54);
+        filter: brightness(1.2);
+      }
+     
     }
   }
 }
@@ -58,28 +158,25 @@ main {
     position: relative;
 
     &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 50px; /* Adjust width for visibility */
-        height: 100%;
-        background-image: linear-gradient(to right, #0e0e0e, transparent);
-        z-index: 2; 
-
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50px; /* Adjust width for visibility */
+      height: 100%;
+      background-image: linear-gradient(to right, #0e0e0e, transparent);
+      z-index: 2;
     }
     &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 50px; 
-        height: 100%;
-        background-image: linear-gradient(to left, #0e0e0e, transparent);
-        z-index: 2; 
-
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50px;
+      height: 100%;
+      background-image: linear-gradient(to left, #0e0e0e, transparent);
+      z-index: 2;
     }
-      
 
     .text {
       display: flex;
@@ -92,6 +189,43 @@ main {
       }
     }
   }
+}
+.view-3{
+  margin: 5px;
+  padding: 20px;
+  .card{
+    margin-bottom: 10px;
+    background-color: #292521;
+    border: 2px solid rgba(38, 38, 38, 0.669);
+    border-radius: 4px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+    h3{
+      margin: 20px;
+      font-weight: 300;
+    }
+    
+    p{
+      font-weight: 200;
+      margin: 20px;
+    }
+    #card-button i{
+      font-size: 20px;
+      padding: 20px;
+      
+    }
+    #card-button span{
+      font-weight: 100;
+
+    }
+    }
+}
+.view-4{
+
+  
 }
 
 @keyframes marquee {
@@ -107,6 +241,7 @@ main {
   html {
     font-size: clamp(16px, 1vh, 20px);
   }
+ 
   .view-1 {
     img {
       width: 28%;
@@ -119,11 +254,23 @@ main {
         display: block;
       }
     }
-  }
-  .view-2{
-    .marquee{
-        width: 50%;
-    }
 
+  }
+  .view-2 {
+    .marquee {
+      width: 50%;
+    }
+  }
+  .view-3{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    
+
+    .card{
+      margin: 20px;
+      width: 500px;
+      height: 250px;
+    }
   }
 }
